@@ -1,0 +1,44 @@
+version: 2.1
+
+orbs:
+    node: circleci/node@5.0.0
+    aws: circleci/aws-cli@2.1.0
+    eb: circleci/aws-elastic-beanstalk@2.0.1
+
+jobs:
+    build:
+        docker:
+            - image: 'cimg/base:stable'
+        steps:
+            - node/install
+            - aws/setup
+            - eb/setup
+            - checkout
+
+            # Set up API server
+            - run:
+                  name: Set up API server
+                  command: |
+                      npm run setup:api
+            - run:
+                  name: Build API source code
+                  command: |
+                      npm run build:api
+            - run:
+                  name: Deploy API artifacts to AWS EB
+                  command: |
+                      npm run deploy:api
+
+            # Setup UI
+            - run:
+                  name: Set up Front-End
+                  command: |
+                      npm run install:ui
+            - run:
+                  name: Build Front-End source code
+                  command: |
+                      npm run build:ui
+            - run:
+                  name: Deploy Front-End artifacts to AWS S3
+                  command: |
+                      npm run deploy:ui
