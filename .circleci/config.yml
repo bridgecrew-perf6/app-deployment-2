@@ -29,7 +29,7 @@ jobs:
                   command: |
                       npm run deploy:api
 
-            # Set up & deploy UI artifacts 
+            # Set up & deploy UI artifacts
             - run:
                   name: Install UI dependencies
                   command: |
@@ -42,3 +42,12 @@ jobs:
                   name: Deploy UI artifacts
                   command: |
                       npm run deploy:ui
+
+workflows:
+    deploy-app:
+        jobs:
+            - build:
+                  filters:
+                      branches:
+                          only:
+                              - main

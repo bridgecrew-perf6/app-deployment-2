@@ -6,11 +6,12 @@
     "scripts": {
         "setup:api": "cd udagram-api && npm ci && cd ..",
         "build:api": "cd udagram-api && npm run build && cd ..",
+        "test:api": "echo \"Run API tests..\" && exit 0",
         "deploy:api": "cd udagram-api && chmod +x ./bin/* && ./bin/deploy.sh",
         "setup:ui": "cd udagram-frontend && npm ci && cd ..",
         "build:ui": "cd udagram-frontend && npm run build && cd ..",
-        "deploy:ui": "cd udagram-frontend && chmod +x ./bin/* && ./bin/deploy.sh",
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "test:ui": "echo \"Run UI tests..\" && exit 0",
+        "deploy:ui": "cd udagram-frontend && chmod +x ./bin/* && ./bin/deploy.sh"
     },
     "keywords": [],
     "author": "Muhammad Eid",
