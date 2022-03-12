@@ -15,30 +15,30 @@ jobs:
             - eb/setup
             - checkout
 
-            # Set up API server
+            # Set up & deploy API artifacts
             - run:
-                  name: Set up API server
+                  name: Install API dependencies
                   command: |
                       npm run setup:api
             - run:
-                  name: Build API source code
+                  name: Build API from source code
                   command: |
                       npm run build:api
             - run:
-                  name: Deploy API artifacts to AWS EB
+                  name: Deploy API artifacts
                   command: |
                       npm run deploy:api
 
-            # Setup UI
+            # Set up & deploy UI artifacts 
             - run:
-                  name: Set up Front-End
+                  name: Install UI dependencies
                   command: |
                       npm run setup:ui
             - run:
-                  name: Build Front-End source code
+                  name: Build UI from source code
                   command: |
                       npm run build:ui
             - run:
-                  name: Deploy Front-End artifacts to AWS S3
+                  name: Deploy UI artifacts
                   command: |
                       npm run deploy:ui
