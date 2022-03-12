@@ -33,7 +33,7 @@ jobs:
             - run:
                   name: Set up Front-End
                   command: |
-                      npm run install:ui
+                      npm run setup:ui
             - run:
                   name: Build Front-End source code
                   command: |
