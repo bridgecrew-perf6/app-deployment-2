@@ -1,6 +1,14 @@
 # AWS - App Deployment
 
-## Project Set Up
+## Website URL
+
+Visit this URL check the hosted application:
+[udagram-app](http://udagram-prod-ui.s3-website-us-east-1.amazonaws.com/)
+
+-   [Screenshots](screenshots)
+-   [Diagrams](docs)
+
+## Project Set Up (for local development)
 
 -   Clone the repo
 
