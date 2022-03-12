@@ -3,7 +3,7 @@ eb init $APP_NAME                   \
     --region=$AWS_DEFAULT_REGION    \
     --platform=$PLATFORM            \
 
-eb use prod-env
+eb use udagram-env
 
 eb setenv NODE_ENV=$NODE_ENV        \
           PORT=$PORT                \

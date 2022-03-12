@@ -1,3 +1,4 @@
+# Generate .ebignore file from source code repo
 if [ -e .ebignore ]; then
     rm .ebignore
 fi
