@@ -3,7 +3,7 @@
 // The list of file replacements can be found in `angular.json`.
 
 const API_URL =
-    'http://udagram-env.eba-bqbszsp9.us-east-1.elasticbeanstalk.com';
+    'http://udagram-env.eba-37tbvbsc.us-east-1.elasticbeanstalk.com';
 
 export const environment = {
     production: true,
